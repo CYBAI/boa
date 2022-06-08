@@ -718,9 +718,7 @@ impl Context {
     }
 
     fn run_queued_jobs(&mut self) {
-        while let Some(job) = self
-                .promise_job_queue
-                .pop_front() {
+        while let Some(job) = self.promise_job_queue.pop_front() {
             job.run(self);
         }
     }
