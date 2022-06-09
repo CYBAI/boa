@@ -9,9 +9,7 @@ pub struct JobCallback {
 
 impl JobCallback {
     pub fn make_job_callback(callback: JsValue) -> Self {
-        Self {
-            callback,
-        }
+        Self { callback }
     }
 
     pub fn call_job_callback(
